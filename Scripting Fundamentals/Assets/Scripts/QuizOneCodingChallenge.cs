@@ -4,36 +4,38 @@ using UnityEngine;
 
 public class QuizOneCodingChallenge : MonoBehaviour
 {
-    public int score = 0;
+    public int Score = 0;
     public string PlayerName = "marie";
-    public float health = 100;
+    public int Health = 100;
 
     // Start is called before the first frame update
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         IncreaseScore();
         PrintPlayerName();
         DecreaseHealth();
     }
 
-    private int IncreaseScore(int 0)
+    // Update is called once per frame
+    void Update()
     {
-        return score + 10;
+  
+    }
+
+    private void IncreaseScore(int amount)
+    {
+        // either one works, don't need int amount if adding 10
+        Score += 10;
+        Score = Score + amount;
     }
 
     private void PrintPlayerName()
     {
-
+        Debug.Log(PlayerName);
     }
 
-    private int DecreaseHealth(int 100)
+    private int DecreaseHealth()
     {
-        return health - 20;
+        Health -= 20;
     }
 }
